@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vaarya Patel | Data Science Student</title>
+<meta name="description" content="Portfolio of Vaarya Patel, Data Science student at MPSTME, Mumbai.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#ecebe9;--card:#fafafa;--ink:#151515;--mute:#666;--line:#e2e0dd;--accent:#ff5a36;--r:28px}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:96px}
+body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+a{color:inherit;text-decoration:none}
+a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{max-width:1400px;margin:0 auto;padding:0 28px}
+/* nav */
+nav{position:sticky;top:0;z-index:10;background:var(--bg);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;padding-top:16px;padding-bottom:16px;gap:8px}
+.pill{border:1px solid var(--line);background:var(--card);border-radius:99px;padding:10px 22px;font-size:13px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;white-space:nowrap}
+.pill small{color:var(--mute);font-size:inherit}
+.pill:hover{background:#fff;border-color:#ccc}
+nav div{display:flex;gap:12px}
+/* cards */
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column}
+.card h2,.card h3{font-weight:600}
+.head{padding:20px 30px;border-bottom:1px solid var(--line);color:var(--mute);font-weight:500}
+.body{padding:28px 30px}
+.btn{display:flex;justify-content:space-between;align-items:center;background:var(--ink);color:#fff;border-radius:16px;padding:18px 24px;font-weight:500;margin-top:auto}
+.btn.light{background:#efeeec;color:var(--ink)}
+/* bento */
+.bento{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:270px;gap:20px;padding:30px 0}
+.hero{grid-column:span 2;grid-row:span 2}
+.aboutcard{grid-row:span 2}
+.wide{grid-column:span 2}
+.banner{height:280px;background:#e6dccb;position:relative;flex:none}
+.banner>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.avatar{position:absolute;left:30px;bottom:-76px;width:156px;height:156px;border-radius:50%;border:5px solid var(--card);background:#ddd;z-index:1;overflow:hidden;display:grid;place-items:center}
+.avatar img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero h1{font-size:clamp(38px,5vw,64px);line-height:1.02;letter-spacing:-.04em;font-weight:600;padding:98px 30px 0}
+.role{padding:6px 30px 30px;font-size:17px;color:var(--mute);font-weight:500}
+.aboutcard .body{display:flex;flex-direction:column;flex:1;font-size:15.5px}
+.aboutcard p{margin-bottom:18px}
+.play{background:var(--accent);color:#fff;padding:24px;justify-content:space-between;border:0;position:relative}
+.play>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.play::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,#0000 35%,#000a)}
+.play>div{position:relative;z-index:1}
+.play .ico{width:52px;height:52px;border-radius:50%;background:#fff;color:var(--accent);display:grid;place-items:center;font-size:20px}
+.play b{font-size:20px;display:block}.play span{opacity:.9}
+.bars{height:36px;background:repeating-linear-gradient(90deg,#fff 0 3px,transparent 3px 8px);-webkit-mask:linear-gradient(90deg,#000 0 100%);opacity:.9;clip-path:polygon(0 60%,8% 20%,16% 70%,24% 10%,32% 80%,40% 30%,48% 90%,56% 20%,64% 70%,72% 0,80% 60%,88% 30%,100% 75%,100% 100%,0 100%,0 0)}
+.cv{padding:24px 28px}
+.cv .big{font-size:84px;font-weight:600;letter-spacing:-.05em;line-height:1}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{border:1px solid #ddd;border-radius:99px;padding:8px 18px;font-size:14.5px;background:var(--card)}
+.photo{position:relative;background:#e6dccb;justify-content:flex-end;color:#fff}
+.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.photo span,.photo .tag{position:relative}
+.tag{margin:20px;background:#fff;color:var(--ink);border-radius:99px;padding:8px 18px;font-size:14px;font-weight:500;align-self:flex-start}
+.ph{position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:16px;color:#8a7d66;font-size:13px}
+/* sections */
+section{padding:50px 0 10px}
+section>.wrap>h2{font-size:clamp(38px,6vw,76px);letter-spacing:-.04em;line-height:1;font-weight:600;margin-bottom:28px}
+.two{display:grid;grid-template-columns:1.4fr 1fr;gap:20px}
+.stack{display:grid;gap:20px;align-content:start}
+.long p{font-size:18px;margin-bottom:20px;max-width:70ch}
+.grp{margin-bottom:26px}.grp h3{font-size:16px;color:var(--mute);font-weight:500;margin-bottom:12px}
+.row{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid var(--line)}.row:last-child{border:0}
+.proj{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.proj .card{padding:30px;gap:12px;min-height:250px}
+.proj h3{font-size:28px;letter-spacing:-.03em}
+.proj p{color:#444}
+.status{align-self:flex-start;font-size:13px;background:#ffe4dc;color:#b93a1c;padding:4px 12px;border-radius:99px;font-weight:500}
+.tags{margin-top:auto;color:var(--mute);font-size:14px}
+.gal h3{font-size:22px;margin:30px 0 14px;letter-spacing:-.02em}
+.grid2{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+figure{border-radius:var(--r);overflow:hidden;background:#e6dccb;position:relative;aspect-ratio:4/3;margin:0}
+figure img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+figcaption{position:absolute;left:14px;bottom:14px;right:14px;background:#fffe;border-radius:99px;padding:7px 16px;font-size:14px;width:fit-content;max-width:calc(100% - 28px)}
+.contact{background:var(--ink);color:#fff;border-radius:var(--r);padding:60px 50px 0;margin:50px 0 30px}
+.contact h2{font-size:clamp(38px,6vw,76px);letter-spacing:-.04em;line-height:1.02;font-weight:600;max-width:12em}
+.links{display:flex;flex-wrap:wrap;gap:12px;margin:36px 0 60px}
+.links a{border:1px solid #444;border-radius:99px;padding:16px 26px;font-weight:500}
+.links a:first-child{background:#fff;color:var(--ink);border-color:#fff}
+.links a:hover{border-color:#fff}
+.foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;border-top:1px solid #333;padding:22px 0;color:#aaa;font-size:14px}
+.tat figure{aspect-ratio:3/4}
+.tat p{padding:14px 4px 0;color:#444;font-size:16px;max-width:42ch}
+@media(max-width:980px){.bento{grid-template-columns:repeat(2,1fr)}.hero{grid-column:span 2}.aboutcard{grid-row:auto;grid-column:span 2;min-height:0}.two,.proj{grid-template-columns:1fr}.grid2{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.wrap{padding:0 16px}.bento{grid-template-columns:1fr;grid-auto-rows:auto;gap:14px}.hero,.wide,.aboutcard{grid-column:auto}.play,.photo,.cv{min-height:230px}.pill{padding:8px 14px;font-size:11px}nav .pill.name small{display:none}.grid2{grid-template-columns:1fr}.contact{padding:40px 24px 0}.body,.head{padding-left:22px;padding-right:22px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <a class="pill name" href="#top">Vaarya Patel <small>/ Data Science</small></a>
+  <div><a class="pill" href="#projects">Work</a><a class="pill" href="#about">About</a><a class="pill" href="#contact">Contact</a></div>
+</div></nav>
+
+<main id="top">
+<div class="wrap">
+<div class="bento">
+
+  <!-- HERO CARD -->
+  <a class="card hero" href="#about">
+    <div class="banner">
+      <!-- ============ PHOTO 1: CUTE BANNER PHOTO (wide/landscape works best) ============
+           Save as  images/banner.jpg -->
+      <div class="ph">Add images/banner.jpg</div>
+      <img src="images/banner.jpg" alt="" onerror="this.remove()">
+      <!-- ============ PHOTO 2: YOUR PROFILE PHOTO (round) ============
+           Save as  images/me.jpeg  (face centred) -->
+      <div class="avatar"><img src="images/me.jpeg" alt="Vaarya Patel" onerror="this.remove()"></div>
+    </div>
+    <h1>Vaarya Patel</h1>
+    <p class="role">Aspiring Data Scientist</p>
+  </a>
+
+  <!-- ABOUT CARD (click = jumps to full About section) -->
+  <a class="card aboutcard" href="#about">
+    <div class="head">About</div>
+    <div class="body">
+      <p>Hi, I'm Vaarya, a Data Science student in Mumbai who loves finding the story hiding inside a messy dataset. Away from the laptop: books, baking, food, travel and a bit of shopping.</p>
+      <span class="btn">Read my story <span>↗</span></span>
+    </div>
+  </a>
+
+  <!-- PLAYLIST CARD (opens Apple Music in new tab) -->
+  <a class="card play" href="https://music.apple.com/in/playlist/11-11/pl.u-KVXBkl1ILJDG1am" target="_blank" rel="noopener">
+    <!-- ============ PHOTO 3: PLAYLIST COVER ============
+         Save as  images/playlist.jpeg -->
+    <img src="images/playlist.jpeg" alt="" onerror="this.remove()">
+    <div class="ico">▶</div>
+    <div><b>My "11:11" playlist</b><span>Press play, make a wish</span></div>
+  </a>
+
+  <!-- CV CARD -->
+  <div class="card cv">
+    <div class="big">CV</div>
+    <!-- Put your resume PDF in the main folder named  resume.pdf -->
+    <a class="btn light" href="resume.pdf" download>Download <span>↓</span></a>
+  </div>
+
+  <!-- EXPERTISE CARD -->
+  <a class="card wide" href="#expertise">
+    <div class="head">Expertise</div>
+    <div class="body chips">
+      <span class="chip">Python</span><span class="chip">Machine Learning</span><span class="chip">Power BI</span><span class="chip">Data Analysis</span><span class="chip">SAP SAC</span><span class="chip">Tableau</span><span class="chip">React.js</span><span class="chip">Deep Learning</span>
+    </div>
+  </a>
+
+  <!-- HOBBIES CARD -->
+  <a class="card photo" href="#hobbies">
+    <!-- ============ PHOTO 4: HOBBIES COVER ============
+         Save as  images/hobbies-cover.jpeg  -->
+    <div class="ph">Add images/hobbies-cover.jpeg</div>
+    <img src="images/hobbies-cover.jpeg" alt="" onerror="this.remove()">
+    <span class="tag">Beyond the code: hobbies ↗</span>
+  </a>
+
+  <!-- PROJECTS CARD -->
+  <a class="card" href="#projects" style="padding:0">
+    <div class="head">Selected work</div>
+    <div class="body" style="display:flex;flex-direction:column;flex:1">
+      <p style="font-size:44px;font-weight:600;letter-spacing:-.04em;line-height:1">4 projects</p>
+      <p style="color:var(--mute);margin-top:8px">Cricket, finance, placements and churn.</p>
+      <span class="btn">View my work <span>↗</span></span>
+    </div>
+  </a>
+</div>
+</div>
+
+<!-- ================= ABOUT ================= -->
+<section id="about"><div class="wrap">
+  <h2>About me</h2>
+  <div class="two">
+    <div class="card"><div class="body long" style="padding:40px">
+      <p>Hi, I'm Vaarya! I'm a Data Science student at Mukesh Patel School of Technology Management &amp; Engineering in Mumbai, and I love finding the story hiding inside a messy dataset. I work with Python, machine learning and dashboards, and I've built a cricket performance predictor, a personal finance dashboard, and a placement-prep guide. I'm currently working on an AI-powered customer churn system and learning RAG and deep learning on the side. During my internship at Sony Pictures Networks India, I built an ad sales dashboard in SAP SAC, and I was told my communication and presentation skills stood out, which I'll happily take as a compliment.</p>
+      <p>Away from my laptop, life is a lot more delicious. I'm happiest with a good book in hand, or in the kitchen baking something that makes the whole house smell amazing, and then eating it, because good food is the best reward for hard work. I love exploring new places, and I'll shop whenever I get the chance (retail therapy is a valid coping strategy, and I have the receipts to prove it). I also volunteer with children in a slum community, teaching them concentration techniques and helping with their studies. It's the part of my week that teaches me the most.</p>
+      <p>I like to build things that are smart, useful and a little bit fun, just like my "11:11" playlist. Press play, make a wish, and keep scrolling. ✨</p>
+    </div></div>
+    <div class="stack">
+      <div class="card"><div class="head">Education</div><div class="body">
+        <p style="font-weight:600">B.Tech, Data Science</p>
+        <p style="color:var(--mute);margin-bottom:14px">Mukesh Patel School of Technology Management &amp; Engineering, Mumbai</p>
+        <div class="row"><span>Current CGPA</span><b>8.65</b></div>
+        <div class="row"><span>Semester 4</span><span>9.05</span></div>
+        <div class="row"><span>Semester 3</span><span>9.14</span></div>
+        <div class="row"><span>Semester 2</span><span>8.55</span></div>
+        <div class="row"><span>Semester 1</span><span>7.79</span></div>
+      </div></div>
+      <div class="card"><div class="head">Volunteering</div><div class="body">Worked with underprivileged children in a slum community, teaching concentration techniques and supporting their studies.</div></div>
+    </div>
+  </div>
+</div></section>
+
+<!-- ================= EXPERTISE ================= -->
+<section id="expertise"><div class="wrap">
+  <h2>Expertise</h2>
+  <div class="card"><div class="body" style="padding:40px">
+    <div class="grp"><h3>Python for data</h3><div class="chips"><span class="chip">Pandas</span><span class="chip">NumPy</span><span class="chip">Matplotlib</span><span class="chip">Scikit-learn</span><span class="chip">TensorFlow</span><span class="chip">Data cleaning &amp; preprocessing</span></div></div>
+    <div class="grp"><h3>Analytics &amp; BI tools</h3><div class="chips"><span class="chip">Power BI</span><span class="chip">Tableau</span><span class="chip">Advanced Excel</span><span class="chip">SAP SAC</span><span class="chip">Databricks</span><span class="chip">R</span></div></div>
+    <div class="grp"><h3>Programming &amp; web</h3><div class="chips"><span class="chip">C++</span><span class="chip">Java</span><span class="chip">Android Studio</span><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">React.js</span><span class="chip">AutoCAD</span></div></div>
+    <div class="grp" style="margin:0"><h3>Learning right now</h3><div class="chips"><span class="chip">RAG (Retrieval-Augmented Generation) certification</span><span class="chip">Deep Learning certification</span><span class="chip">Basics of ML &amp; DL</span></div></div>
+  </div></div>
+</div></section>
+
+<!-- ================= PROJECTS ================= -->
+<section id="projects"><div class="wrap">
+  <h2>Selected work</h2>
+  <div class="proj">
+    <div class="card"><h3>Placement Prep Detector</h3><p>Generates a daily preparation guide that spells out exactly what to study for upcoming placements and interviews.</p></div>
+    <div class="card"><h3>Cricket Performance Predictor</h3><p>Analyses player statistics and classifies performance as great, average or poor, based on historical data.</p></div>
+    <div class="card"><h3>Personal Finance Dashboard</h3><p>Log expenses, set monthly budgets and see your spending visualised by category.</p></div>
+    <div class="card"><span class="status">In progress</span><h3>Customer Churn Intelligence System</h3><p>An AI-powered ML system that predicts customer churn and surfaces retention insights.</p></div>
+  </div>
+  <div class="card" style="margin-top:20px"><div class="body" style="padding:34px 40px">
+    <h3 style="font-size:24px;letter-spacing:-.02em">Sony Pictures Networks India: Data Analytics Intern</h3>
+    <p style="color:var(--mute);margin-bottom:12px">19 June to 4 July 2025</p>
+    <p>Worked hands-on with SAP SAC, explored SAP Databricks to understand its AI capabilities, and designed a mock-up Linear Ad Sales performance dashboard with KPIs and visuals. Recognised for communication, research and presentation skills.</p>
+  </div></div>
+  <p style="margin-top:20px"><a class="pill" href="https://github.com/vaaryapatel" target="_blank" rel="noopener" style="display:inline-block">See the code on GitHub ↗</a></p>
+</div></section>
+
+<!-- ================= HOBBIES ================= -->
+<section id="hobbies"><div class="wrap gal">
+  <h2>Beyond the code</h2>
+  <!-- Each figure below = one photo. Change the src file name if you like, and edit the caption text. -->
+
+  <h3>Tattoos</h3>
+  <div class="grid2 tat">
+    <!-- PHOTO: images/tattoo-1.jpeg -->
+    <div><figure><div class="ph">Add images/tattoo-1.jpeg</div><img src="images/tattoo-1.jpeg" alt="Tattoo 1" onerror="this.remove()"></figure><p>My daily reminder to stay hopeful, because wishes really do come true.</p></div>
+    <!-- PHOTO: images/tattoo-2.jpeg -->
+    <div><figure><div class="ph">Add images/tattoo-2.jpeg</div><img src="images/tattoo-2.jpeg" alt="Tattoo 2" onerror="this.remove()"></figure><p>The lily stands for love and renewal. The phrase beside it translates to “I am, I was and I will be”, my reminder that nothing is ever too difficult.</p></div>
+    <!-- PHOTO: images/tattoo-3.jpeg -->
+    <div><figure><div class="ph">Add images/tattoo-3.jpeg</div><img src="images/tattoo-3.jpeg" alt="Tattoo 3" onerror="this.remove()"></figure><p>A symbol of inner magic and individuality, and, happily, also a great song.</p></div>
+  </div>
+
+  <h3>Food</h3>
+  <div class="grid2">
+    <!-- PHOTO: images/food-1.jpeg -->
+    <figure><div class="ph">Add images/food-1.jpeg</div><img src="images/food-1.jpeg" alt="Food" onerror="this.remove()"><figcaption>Best meal lately</figcaption></figure>
+    <!-- PHOTO: images/food-2.jpeg -->
+    <figure><div class="ph">Add images/food-2.jpeg</div><img src="images/food-2.jpeg" alt="Food" onerror="this.remove()"><figcaption>too good to share</figcaption></figure>
+    <!-- PHOTO: images/food-3.jpeg -->
+    <figure><div class="ph">Add images/food-3.jpeg</div><img src="images/food-3.jpeg" alt="Food" onerror="this.remove()"><figcaption>Foodie finds</figcaption></figure>
+  </div>
+
+  <h3>Travel</h3>
+  <div class="grid2">
+    <!-- PHOTO: images/travel-1.jpeg -->
+    <figure><div class="ph">Add images/travel-1.jpeg</div><img src="images/travel-1.jpeg" alt="Travel" onerror="this.remove()"><figcaption>Favourite view</figcaption></figure>
+    <!-- PHOTO: images/travel-2.jpeg -->
+    <figure><div class="ph">Add images/travel-2.jpeg</div><img src="images/travel-2.jpeg" alt="Travel" onerror="this.remove()"><figcaption>Lost, happily</figcaption></figure>
+    <!-- PHOTO: images/travel-3.jpeg -->
+    <figure><div class="ph">Add images/travel-3.jpeg</div><img src="images/travel-3.jpeg" alt="Travel" onerror="this.remove()"><figcaption>Next stop?</figcaption></figure>
+  </div>
+</div></section>
+
+<!-- ================= CONTACT ================= -->
+<div class="wrap">
+<section id="contact" class="contact" style="padding-bottom:0">
+  <h2>Let's build something smart and a little fun.</h2>
+  <div class="links">
+    <a href="mailto:vaaryapatel@gmail.com">✉ vaaryapatel@gmail.com</a>
+    <a href="https://www.linkedin.com/in/vaarya-patel-7aa72731a/" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="https://github.com/vaaryapatel" target="_blank" rel="noopener">GitHub</a>
+  </div>
+  <div class="foot"><span>© 2026 Vaarya Patel</span><span>Mumbai, India</span><a href="#top">Back to top ↑</a></div>
+</section>
+</div>
+</main>
+</body>
+</html>
